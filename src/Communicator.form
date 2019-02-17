@@ -34,8 +34,8 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <font size="22" style="1"/>
-                      <text value="Image Selection and Filtering Parameters"/>
+                      <font size="16" style="1"/>
+                      <text value="Image selection and filtering parameters"/>
                     </properties>
                   </component>
                 </children>
@@ -53,7 +53,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Image Full Path:"/>
+                      <text value="Image location:"/>
                     </properties>
                   </component>
                   <hspacer id="30589">
@@ -67,14 +67,17 @@
                         <preferred-size width="150" height="-1"/>
                       </grid>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <editable value="false"/>
+                      <enabled value="true"/>
+                    </properties>
                   </component>
                   <component id="d3633" class="javax.swing.JButton" binding="btnBrowse">
                     <constraints>
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Browse..."/>
+                      <text value="Browse files..."/>
                     </properties>
                   </component>
                 </children>
@@ -148,7 +151,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Set custom threshold:"/>
+                      <text value="Set black and white threshold (color value in range 0 - 255):"/>
                     </properties>
                   </component>
                   <component id="ccb4b" class="javax.swing.JLabel" binding="lblThresholdMin">
@@ -210,8 +213,8 @@
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
-                          <font size="22" style="1"/>
-                          <text value="Results"/>
+                          <font size="16" style="1"/>
+                          <text value="Result images"/>
                         </properties>
                       </component>
                     </children>
@@ -229,7 +232,7 @@
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
-                          <text value="&lt;source image&gt;"/>
+                          <text value="Select a source image."/>
                         </properties>
                       </component>
                       <component id="2af45" class="javax.swing.JLabel" binding="lblAfterImage">
@@ -237,7 +240,7 @@
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
-                          <text value="&lt;result image&gt;"/>
+                          <text value="Processed image will be shown here."/>
                         </properties>
                       </component>
                     </children>
@@ -257,7 +260,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <font size="22" style="1"/>
+                      <font size="16" style="1"/>
                       <text value="Vectorization"/>
                     </properties>
                   </component>
@@ -276,7 +279,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="&lt;vectorization result&gt;"/>
+                      <text value="Vectorized image will be shown here."/>
                     </properties>
                   </component>
                 </children>
@@ -294,7 +297,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Export vectorized image to:"/>
+                      <text value="Output drawing to:"/>
                     </properties>
                   </component>
                   <hspacer id="8ec97">
@@ -309,7 +312,8 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <text value="unnamed.svg"/>
+                      <editable value="false"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="f084d" class="javax.swing.JButton" binding="btnSelectSVGPath">
@@ -317,7 +321,7 @@
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Choose destination path..."/>
+                      <text value="Browse files..."/>
                     </properties>
                   </component>
                 </children>
@@ -335,7 +339,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Vectorize and export to SVG"/>
+                      <text value="Vectorize and save"/>
                     </properties>
                   </component>
                 </children>
@@ -353,7 +357,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Java Edge Detector by Marek Felsoci (2016)"/>
+                      <text value="Java Edge Detector (JED), Copyright (C) 2016 by Marek Felsoci. Licensed under the GNU GPLv2 (see LICENSE file for more)."/>
                     </properties>
                   </component>
                 </children>

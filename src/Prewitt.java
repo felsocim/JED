@@ -1,32 +1,54 @@
-/**
- * Project: CD Starter
- * Created by Marek Felsoci on 7.12.2016 as a part of university studies.
+/*
+ * JED - Java Edge Detector
+ *
+ * Convolution filtering and simple edge detection program.
+ *
+ * Copyright (C) 2016  Marek Felsoci
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import java.awt.image.BufferedImage;
 
+/**
+ * Prewit filter class.
+ */
 class Prewitt extends Convolution {
-    public Prewitt(BufferedImage source) {
-        super(source, 3);
-    }
+  public Prewitt(BufferedImage source) {
+    super(source, 3);
+  }
 
-    public Prewitt(BufferedImage source, int threshold) {
-        super(source, threshold, 3);
-    }
+  public Prewitt(BufferedImage source, int threshold) {
+    super(source, threshold, 3);
+  }
 
-    public void applyPrewitt() {
-        int[][] filterX = {
-                { -1, 0, 1 },
-                { -1, 0, 1 },
-                { -1, 0, 1 }
-        };
-        int[][] filterY = {
-                { -1, -1, -1 },
-                { 0, 0, 0 },
-                { 1, 1, 1 }
-        };
+  /**
+   * Set filter matrices and apply the filter.
+   */
+  public void applyPrewitt() {
+    int[][] filterX = {
+      { -1, 0, 1 },
+      { -1, 0, 1 },
+      { -1, 0, 1 }
+    };
+    int[][] filterY = {
+      { -1, -1, -1 },
+      { 0, 0, 0 },
+      { 1, 1, 1 }
+    };
 
-        this.setConvolutionMatrix(filterX, filterY);
-
-        this.processImage();
-    }
+    this.setConvolutionMatrix(filterX, filterY);
+    this.processImage();
+  }
 }
