@@ -1,0 +1,7 @@
+# Output files
+out
+META-INF
+
+# IntelliJ IDEA files
+.idea
+*.iml
