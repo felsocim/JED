@@ -27,3 +27,7 @@ Plus, the user interface is pretty straightforward to understand: import a sourc
 ## License
 
 Java Edge Detector and its source code are licensed under the terms of the GNU General Public License, version 2. See the [LICENSE](LICENSE) file for full license text.
+
+## Image credits
+
+The "Lena" image was acquired from [i.stack.imgur.com/o1z7p.jpg](https://i.stack.imgur.com/o1z7p.jpg).
