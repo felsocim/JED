@@ -16,6 +16,12 @@ As the program is written in Java, it can be used on any machine running a Java 
 
 Plus, the user interface is pretty straightforward to understand: import a source image, select the filter to apply, set desired threshold value, select output SVG file and perform vectorization.
 
+## Compiling
+
+At first, ensure there is Java Development Kit (JDK) installed on your computer providing the `javac` and `java` executables.
+
+Then, from a Unix terminal or a Windows Command Prompt instance, navigate to the `src` folder, compile the main program using `javac Main.java` and run with `java Main`.
+
 ## Screenshot
 
 ![JED Screenshot](JED.PNG)
