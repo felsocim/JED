@@ -1,3 +1,6 @@
+# Compiled classes
+*.class
+
 # Output files
 out
 META-INF
